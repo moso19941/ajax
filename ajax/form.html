@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+	</script>
+
+<script src="company.js"></script>
+<script src="productinfo.js"></script>
+	
+</head>
+<body onload="process()">
+
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<h1>AJAX Tutorial</h1>
+				<p></p>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-sm-4">
+				<h1>Sign-up</h1>
+				<form role="form">
+					<div class="form-group">
+						<label for="email">Email:</label> <input type="email"
+							class="form-control" id="email" placeholder="Enter email">
+					</div>
+					<div class="form-group">
+						<label for="pwd">Password:</label> <input type="password"
+							class="form-control" id="pwd" placeholder="Enter password">
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox"> Remember me</label>
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+				</form>
+
+			</div>
+			<div class="col-sm-4">
+				<form role="form">
+					<div class="form-group">
+						<h1>
+							<label for="search">Search Name</label>
+						</h1>
+						<input type="text" class="form-control" id="keyword"
+							placeholder="Enter name">
+					</div>
+				</form>
+				<h1>Products</h1>
+				<form role="form">
+					<div class="form-group">
+						<label for="search">Products List</label>
+						<div class="form-group">
+							<label for="sel1">Select list:</label> 
+							<select
+								class="form-control" id="productlist" name="productlist" onchange="showProduct()">
+								<option value="0">Select Product</option>
+								<option value="1">Robot EV3</option>
+								<option value="2">Arduino Uno</option>
+								<option value="3">Book</option>
+							</select>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-4" id="message_div">
+				<h1>Results</h1>
+				<p id="search_result"></p>
+				<p id="product_info">info</p>
+				<p id="result"></p>
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
